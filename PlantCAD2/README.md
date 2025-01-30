@@ -108,3 +108,10 @@ ls softmasked_genomes/*fa | while read line; do
         --output_file ${output_file} &
 done
 ```
+
+## 4. Format the table
+
+```
+# for window size of 8192
+python 3_format.py --seq_dir annotation --window_size 8192 --step_size 4096 --threshold 0.1 --output_file HF_Dataset/Phytozome_8192/window_8192_step_size_4096.tsv --split
+```
